@@ -1,0 +1,20 @@
+Creating a Git Repo
+
+1. Inside of the project directory that you want to track, initiate a git directory:
+    git init
+2. Add a specific file in your project directory to the git directory:
+    git add <FileName>
+3. OR add all files:
+    git add .
+4. Commit the changes we made to any files that we "added" to the git directory:
+    git commit -m "descriptive commit message"
+
+Copying a Git Repo
+
+1. Copy the SSH link from the repository you want to clone:
+    Repo Link: https://github.com/facebook/react
+    SSH Link: git@github.com:facebook/react.git
+2. Clone the repo to your computer:
+    git clone git@github.com:facebook/react.git
+3. Enter the cloned directory:
+    cd react

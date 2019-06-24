@@ -1,0 +1,31 @@
+Exercises
+1. What are the five scalar data types in Ruby? Please give an example of each.
+  Integer
+    1
+  Float
+    1.1
+  Boolean
+    true
+    false
+  String
+    "hello"
+  Symbol
+    :hello
+
+
+2. What is the return value of a variable assignment?
+
+  	height_in_centimeters = 180
+        180
+
+	   x = 6*2
+	       12
+
+  3. What are two ways to create this sentence using the myName variable?
+      "Hello, Annabel! How are you today?"
+
+        myName = "Annabel"
+
+      "Hello, " + myName + "! How are you today?"
+
+      "Hello, #{myName}! How are you today?"

@@ -1,0 +1,69 @@
+1. Given the below HTML, what are two ways to make the text in the paragraph blue?
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  <p>This is a paragraph.</p>
+  </body>
+</html>
+
+First solution - style tag:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p { color: blue; }
+    </style>
+  </head>
+  <body>
+  <p>This is a paragraph.</p>
+  </body>
+</html>
+
+Second solution - external style sheet
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <p>This is a paragraph.</p>
+  </body>
+</html>
+
+p {
+  color: blue;
+}
+
+
+2. On an external stylesheet, what are some ways to make the text in only the first pgh blue?
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div>
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+  </body>
+</html>
+
+First solution - add an id or class and add styling to that
+  <p id="blue">This is a paragraph.</p>
+
+  #blue {
+    color: blue;
+  }
+
+Second solution - Adjacent Sibling Selector
+
+  div + p {
+    color: blue;
+  }

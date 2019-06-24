@@ -1,0 +1,19 @@
+1. Write a while loop that executes 5 times.
+  Each time it should print out the count of the times that it has looped
+
+  count = 1
+
+  while count < 6 do
+    puts count
+    count +=1
+  end
+
+
+2. Rewrite the above as an until loop
+
+count = 1
+
+until count == 6 do 
+  puts count
+  count +=1
+end

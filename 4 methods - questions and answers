@@ -1,0 +1,14 @@
+1. Define a method that puts out "Hello!" and invoke that method
+
+def myMethod
+  puts "Hello"
+end
+
+2. Define a method that accepts an Integer as an argument
+It should puts out "Hello" x number of times based on the argument
+
+def myMethod(num)
+  num.times do
+    puts "Hello"
+  end
+end

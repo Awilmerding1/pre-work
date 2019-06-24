@@ -1,0 +1,96 @@
+1. What will be printed out and what will be returned with the first array?
+The second?
+
+def myMethod(array)
+  i = 0
+  while i < array.length do
+    if (array[i] == 3 || array[i] == 4)
+      puts array[i]
+      return true
+    end
+    i += 1
+  end
+  return false
+end
+
+myArray = [1, 2, 3, 4, 5, 6, 7]
+
+myMethod(myArray)
+
+newArray = [1, 2, 5, 6, 7]
+
+myMethod(newArray)
+
+
+2. Convert the while loop in this method to an each iteration
+  Note: what would the return value be if we do not have return false at the end?
+
+def myMethod(array)
+  array.each do |num|
+    if num == 3 || num == 4
+      puts num
+      return true
+    end
+  end
+  return false
+end
+
+
+3. Write a method that accepts this nested hash:
+
+students = {
+  "Peter" => {
+    :hair_color => ["brown"],
+    :gender => ["male"],
+    :favorite_colors => ["green", "blue"]
+  },
+  "Sasha" => {
+    :hair_color => ["brown"],
+    :gender => ["female"],
+    :favorite_colors => ["red", "blue"]
+  },
+  "Rob" => {
+    :hair_color => ["blonde"],
+    :gender => ["male"],
+    :favorite_colors => ["orange", "red"]
+  },
+  "Maya" => {
+    :hair_color => ["blonde"],
+    :gender => ["female"],
+    :favorite_colors => ["purple", "green"]
+  }
+}
+
+and converts it to this hash:
+
+students = {
+  :hair_color => {
+    :brown => ["Peter", "Sasha"],
+    :blonde => ["Rob", "Maya"]
+  },
+  :gender => {
+    :male => ["Peter", "Rob"],
+    :female => ["Sasha", "Maya"]
+  },
+  :favorite_colors => {
+    :green => ["Peter", "Maya"],
+    :blue => ["Peter", "Sasha"],
+    :red => ["Sasha", "Rob"],
+    :orange => ["Rob"]
+    :purple => ["Maya"]
+  }
+}
+
+def myMethod(hash)
+  newHash = {}
+  hash.each do |student, data|
+    data.each do |key, value|
+      newHash[key] ||= {}
+        value.each do |word|
+          newHash[key][word] ||= []
+          newHash[key][word] << student
+        end
+      end
+  end
+return newHash
+end

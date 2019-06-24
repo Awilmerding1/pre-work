@@ -1,0 +1,32 @@
+Rewrite the below as a case statement:
+
+city = "NYC"
+
+if city == "NYC"
+  puts "I love NYC!"
+elsif city == "San Francisco"
+  puts "I love San Francisco"
+elsif city == "Chicago"
+  puts "I love Chicago!"
+elsif city == "Miami"
+  puts "I love Miami!"
+else
+  puts "Where is that?"
+end
+
+solution
+
+city = "NYC"
+
+case city
+  when "NYC"
+    puts "I love NYC!"
+  when "San Francisco"
+    puts "I love San Francisco!"
+  when "Chicago"
+    puts "I love Chicago!"
+  when "Miami"
+    puts "I love Miami!"
+  else
+    puts "Where is that?"
+end
